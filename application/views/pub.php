@@ -34,8 +34,8 @@
 			</tr>
 			<tr>
 				<td class="text-right">性别：</td>
-				<td><label>男<?php echo form_radio('sex','boy', TRUE);?></label>&nbsp;&nbsp;
-					<label>女<?php echo form_radio('sex','girl'); ?></label></td>
+				<td><label>男<?php echo form_radio('gender','boy', TRUE);?></label>&nbsp;&nbsp;
+					<label>女<?php echo form_radio('gender','girl'); ?></label></td>
 			</tr>
 			<tr>
 				<td class="text-right">生日：</td>
@@ -70,7 +70,7 @@
 			</tr>
 			<tr>
 				<td class="text-right">头像：</td>
-				<td><?php echo form_upload('touxiang');?></td>
+				<td><?php echo form_upload('avatar');?></td>
 			</tr>
 			<tr>
 				<td class="text-right">爱好：</td>

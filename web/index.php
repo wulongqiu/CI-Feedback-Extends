@@ -1,5 +1,5 @@
 <?php
-
+date_default_timezone_set('Asia/Hong_Kong');
 /*
  *---------------------------------------------------------------
  * APPLICATION ENVIRONMENT
@@ -18,8 +18,15 @@
  * NOTE: If you change these, also change the error_reporting() code below
  *
  */
-	define('ENVIRONMENT', 'development');
-/*
+// 开发配置和生成配置，数据库连接
+switch (dirname(__FILE__)) {
+	case 'D:\wamp\www\ci_feedback_extends\web':
+		define('ENVIRONMENT', 'development');
+		break;
+	default:
+		define('ENVIRONMENT', 'production');
+		break;
+}/*
  *---------------------------------------------------------------
  * ERROR REPORTING
  *---------------------------------------------------------------
@@ -33,18 +40,19 @@ if (defined('ENVIRONMENT'))
 	switch (ENVIRONMENT)
 	{
 		case 'development':
-			error_reporting(E_ALL);
-		break;
-	
+			error_reporting(E_ALL | E_STRICT);
+			break;
+
 		case 'testing':
 		case 'production':
 			error_reporting(0);
-		break;
+			break;
 
 		default:
-			exit('The application environment is not set correctly.');
+			exit('应用环境没有正确配置');
 	}
 }
+
 
 /*
  *---------------------------------------------------------------
@@ -56,7 +64,7 @@ if (defined('ENVIRONMENT'))
  * as this file.
  *
  */
-	$system_path = 'system';
+	$system_path = '../system';
 
 /*
  *---------------------------------------------------------------
@@ -72,7 +80,7 @@ if (defined('ENVIRONMENT'))
  * NO TRAILING SLASH!
  *
  */
-	$application_folder = 'application';
+	$application_folder = '../application';
 
 /*
  * --------------------------------------------------------------------

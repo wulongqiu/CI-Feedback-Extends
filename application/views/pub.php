@@ -4,6 +4,7 @@
 	<title><?php echo $site_name;?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="<?php echo $site_url;?>css/bootstrap.css">
+	<link rel="stylesheet" href="<?php echo $site_url;?>css/bootstrap-datetimepicker.css">
 	<link rel="stylesheet" href="<?php echo $site_url;?>css/my.css">
 
 	<!--[if lt IE 9]>
@@ -15,15 +16,21 @@
 <p></p>
 <div class="container">
 	<div class="row">
-		<?php echo form_open(); ?>
+		<?php
+		$subdata = array(
+			'class' => 'form_horizontal',
+			'role' => 'form',
+		);
+		echo form_open('', $subdata);
+		?>
 		<table class="table table-hover table-bordered">
 			<tr>
 				<td class="text-right" width="120">用户名：</td>
-				<td><?php echo form_input('name');?></td>
+				<td><?php echo form_input('name','','class="form-control"');?></td>
 			</tr>
 			<tr>
 				<td class="text-right">密码：</td>
-				<td><?php echo form_password('password'); ?></td>
+				<td><?php echo form_password('password','','class="form-control"'); ?></td>
 			</tr>
 			<tr>
 				<td class="text-right">性别：</td>
@@ -32,7 +39,20 @@
 			</tr>
 			<tr>
 				<td class="text-right">生日：</td>
-				<td></td>
+				<td>
+                    <div class="form-group">
+                        <div class="input-group date form_datetime col-md-7"
+                             data-date=""
+                             data-date-format="yyyy MM dd - HH:ii:ss p"
+                             data-link-field="dtp_input1">
+                            <input class="form-control" size="16" type="text" value="" readonly>
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+                        </div>
+                        <input type="hidden" id="dtp_input1" value="" />
+                    </div>
+
+                </td>
 			</tr>
 			<tr>
 				<td class="text-right">地区：</td>
@@ -45,7 +65,7 @@
 						'3' => '广东省',
 						'4' => '上海市',
 					);
-					echo form_dropdown('选择地区', $area_array);?>
+					echo form_dropdown('area', $area_array);?>
 				</td>
 			</tr>
 			<tr>
@@ -87,7 +107,22 @@
 	</div>
 </div>
 
-<script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
-<script src="<?php echo $site_url;?>js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="<?php echo $site_url;?>js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="<?php echo $site_url;?>js/bootstrap.min.js"></script>
+<script type="text/javascript" src="<?php echo $site_url;?>js/bootstrap-datetimepicker.js"></script>
+<script type="text/javascript" src="<?php echo $site_url;?>js/bootstrap-datetimepicker.zh-CN.js"></script>
+<script type="text/javascript">
+    $('.form_datetime').datetimepicker({
+        language:  'zh-CN',
+        weekStart: 1,
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 2,
+        forceParse: 0,
+        showMeridian: 1
+    });
+</script>
 </body>
 </html>

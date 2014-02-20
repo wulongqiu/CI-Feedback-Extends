@@ -16,6 +16,7 @@
 <p></p>
 <div class="container">
 	<div class="row">
+        <?php echo validation_errors(); ?>
 		<?php
 		$subdata = array(
 			'class' => 'form_horizontal',
@@ -45,7 +46,7 @@
                              data-date=""
                              data-date-format="yyyy MM dd - HH:ii:ss p"
                              data-link-field="dtp_input1">
-                            <input class="form-control" size="16" type="text" value="" readonly>
+                            <input class="form-control" name='birthday' size="16" type="text" value="" readonly>
                             <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
                             <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
                         </div>

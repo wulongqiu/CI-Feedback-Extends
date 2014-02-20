@@ -19,8 +19,8 @@ class Migration_Create_pub extends CI_Migration {
                 'constraint' => '128',
             ),
             'gender' => array(
-                'type' => 'TINYINT',
-                'constraint' => '1',
+                'type' => 'VARCHAR',
+                'constraint' => '10',
             ),
             'birthday' => array(
                 'type' => 'VARCHAR',

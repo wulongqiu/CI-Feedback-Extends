@@ -2,23 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="929dd1da-9a73-4039-9e46-3f0cfe119099" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/autoload.php" afterPath="$PROJECT_DIR$/application/config/autoload.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/migrations/001_Create_pub.php" afterPath="$PROJECT_DIR$/application/migrations/001_Create_pub.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/config.php" afterPath="$PROJECT_DIR$/application/config/config.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/pub.php" afterPath="$PROJECT_DIR$/application/controllers/pub.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/pub.php" afterPath="$PROJECT_DIR$/application/views/pub.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/pub_m.php" afterPath="$PROJECT_DIR$/application/models/pub_m.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="D:\wamp\www\ci_feedback_extends\application\core\MY_model.php" afterPath="$PROJECT_DIR$/application/core/MY_Model.php" />
     </list>
     <ignored path="ci_feedback_extends.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="929dd1da-9a73-4039-9e46-3f0cfe119099" time="1392878023892" ignored="false" />
+    <file path="/Dummy.txt" changelist="929dd1da-9a73-4039-9e46-3f0cfe119099" time="1392894173356" ignored="false" />
     <file path="/database.php" changelist="929dd1da-9a73-4039-9e46-3f0cfe119099" time="1392862052170" ignored="false" />
     <file path="/config.php" changelist="929dd1da-9a73-4039-9e46-3f0cfe119099" time="1392862139263" ignored="false" />
     <file path="/migration.php" changelist="929dd1da-9a73-4039-9e46-3f0cfe119099" time="1392887733500" ignored="false" />
     <file path="/autoload.php" changelist="929dd1da-9a73-4039-9e46-3f0cfe119099" time="1392862304838" ignored="false" />
     <file path="/form.php" changelist="929dd1da-9a73-4039-9e46-3f0cfe119099" time="1392862941491" ignored="false" />
-    <file path="/a.dummy" changelist="929dd1da-9a73-4039-9e46-3f0cfe119099" time="1392862582398" ignored="false" />
+    <file path="/a.dummy" changelist="929dd1da-9a73-4039-9e46-3f0cfe119099" time="1392909507576" ignored="false" />
     <file path="/Pub_Controller.php" changelist="929dd1da-9a73-4039-9e46-3f0cfe119099" time="1392869240183" ignored="false" />
     <file path="/MY_Controller.php" changelist="929dd1da-9a73-4039-9e46-3f0cfe119099" time="1392862732588" ignored="false" />
     <file path="/MY_model.php" changelist="929dd1da-9a73-4039-9e46-3f0cfe119099" time="1392862794764" ignored="false" />
-    <file path="/pub_m.php" changelist="929dd1da-9a73-4039-9e46-3f0cfe119099" time="1392862843466" ignored="false" />
-    <file path="/pub.php" changelist="929dd1da-9a73-4039-9e46-3f0cfe119099" time="1392885316296" ignored="false" />
+    <file path="/pub_m.php" changelist="929dd1da-9a73-4039-9e46-3f0cfe119099" time="1392910583899" ignored="false" />
+    <file path="/pub.php" changelist="929dd1da-9a73-4039-9e46-3f0cfe119099" time="1392911561837" ignored="false" />
     <file path="/cms_config.php" changelist="929dd1da-9a73-4039-9e46-3f0cfe119099" time="1392863157858" ignored="false" />
     <file path="/dummy.xml" changelist="929dd1da-9a73-4039-9e46-3f0cfe119099" time="1392863847893" ignored="false" />
     <file path="/my.css" changelist="929dd1da-9a73-4039-9e46-3f0cfe119099" time="1392867638093" ignored="false" />
@@ -26,6 +31,7 @@
     <file path="/a.html" changelist="929dd1da-9a73-4039-9e46-3f0cfe119099" time="1392881087049" ignored="false" />
     <file path="/a.xml" changelist="929dd1da-9a73-4039-9e46-3f0cfe119099" time="1392881089481" ignored="false" />
     <file path="/001_Create_pub.php" changelist="929dd1da-9a73-4039-9e46-3f0cfe119099" time="1392888189982" ignored="false" />
+    <file path="/MY_Model.php" changelist="929dd1da-9a73-4039-9e46-3f0cfe119099" time="1392909875856" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,22 +68,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/application/config/migration.php" />
-        <option value="$PROJECT_DIR$/application/controllers/form.php" />
-        <option value="$PROJECT_DIR$/application/core/MY_model.php" />
-        <option value="$PROJECT_DIR$/application/models/pub_m.php" />
         <option value="$PROJECT_DIR$/application/config/routes.php" />
-        <option value="$PROJECT_DIR$/application/controllers/pub.php" />
         <option value="$PROJECT_DIR$/application/config/cms_config.php" />
         <option value="$PROJECT_DIR$/application/core/MY_Controller.php" />
         <option value="$PROJECT_DIR$/web/css/bootstrap.css" />
         <option value="$PROJECT_DIR$/web/css/my.css" />
         <option value="$PROJECT_DIR$/application/libraries/Pub_Controller.php" />
         <option value="$PROJECT_DIR$/web/js/bootstrap-datetimepicker.zh-CN.js" />
-        <option value="$PROJECT_DIR$/application/views/pub.php" />
         <option value="$PROJECT_DIR$/application/config/autoload.php" />
         <option value="$PROJECT_DIR$/application/controllers/migration.php" />
+        <option value="$PROJECT_DIR$/application/core/MY_Model.php" />
+        <option value="$PROJECT_DIR$/application/models/pub_m.php" />
+        <option value="$PROJECT_DIR$/application/config/config.php" />
+        <option value="$PROJECT_DIR$/application/controllers/pub.php" />
+        <option value="$PROJECT_DIR$/application/views/pub.php" />
         <option value="$PROJECT_DIR$/application/migrations/001_Create_pub.php" />
+        <option value="$PROJECT_DIR$/application/config/migration.php" />
       </list>
     </option>
   </component>
@@ -412,8 +418,8 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="preferences.sourceCode.PHP" />
     <property name="FullScreen" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -453,7 +459,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2334294" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23775215" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -529,34 +535,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/core/MY_Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="42" selection-start="162" selection-end="162" vertical-scroll-proportion="-4.137931">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1794" column="31" selection-start="25612" selection-end="25612" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/my.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="1" selection-start="52" selection-end="52" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/pub_m.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="1" selection-start="39" selection-end="39" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/css/bootstrap-datetimepicker.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="1" selection-start="342" selection-end="342" vertical-scroll-proportion="0.0">
@@ -566,58 +544,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/js/bootstrap-datetimepicker.zh-CN.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="22" selection-start="542" selection-end="542" vertical-scroll-proportion="0.22889842">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/pub.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="57" selection-start="1246" selection-end="1246" vertical-scroll-proportion="2.0689654">
-          <folding />
-        </state>
+        <state line="11" column="22" selection-start="542" selection-end="542" vertical-scroll-proportion="0.22889842" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/migration.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="47" selection-end="47" vertical-scroll-proportion="-1.3793104">
-          <folding />
-        </state>
+        <state line="2" column="0" selection-start="47" selection-end="47" vertical-scroll-proportion="-1.3793104" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/config/cms_config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="39" selection-start="78" selection-end="78" vertical-scroll-proportion="-1.3793104">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="295" column="44" selection-start="10231" selection-end="10231" vertical-scroll-proportion="32.75862">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/autoload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="109" column="2" selection-start="3009" selection-end="3009" vertical-scroll-proportion="-14.827586">
-          <folding />
-        </state>
+        <state line="2" column="39" selection-start="78" selection-end="78" vertical-scroll-proportion="-1.3793104" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/config/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="23" selection-start="1417" selection-end="1417" vertical-scroll-proportion="-14.620689">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/migration.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="2" selection-start="811" selection-end="811" vertical-scroll-proportion="-9.655172">
-          <folding />
-        </state>
+        <state line="40" column="23" selection-start="1417" selection-end="1417" vertical-scroll-proportion="-14.620689" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/index.php">
@@ -627,17 +569,83 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/migrations/001_Create_pub.php">
+    <entry file="file://$PROJECT_DIR$/application/config/autoload.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="14" selection-start="433" selection-end="433" vertical-scroll-proportion="0.4477612">
+        <state line="103" column="19" selection-start="2869" selection-end="2869" vertical-scroll-proportion="0.5059701">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/core/MY_Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="42" selection-start="162" selection-end="162" vertical-scroll-proportion="0.17910448">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="234" column="41" selection-start="7762" selection-end="7762" vertical-scroll-proportion="0.57014924">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/libraries/Pub_Controller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="1" selection-start="211" selection-end="211" vertical-scroll-proportion="0.26865673">
+        <state line="4" column="30" selection-start="101" selection-end="101" vertical-scroll-proportion="-2.7586207">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/migration.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="1" selection-start="983" selection-end="983" vertical-scroll-proportion="0.5885093">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/core/MY_Model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="34" selection-start="669" selection-end="678" vertical-scroll-proportion="0.7164179">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/migrations/001_Create_pub.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="36" selection-start="748" selection-end="748" vertical-scroll-proportion="0.6567164">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/pub_m.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="44" selection-start="544" selection-end="544" vertical-scroll-proportion="0.26865673">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/pub.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="23" selection-start="353" selection-end="353" vertical-scroll-proportion="0.3880597">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/pub.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="16" selection-start="1332" selection-end="1332" vertical-scroll-proportion="0.38656718">
+          <folding>
+            <marker date="1392911563458" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1392911563458" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1392911563458" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1392911563458" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1392911563458" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1392911563458" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1392911563458" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1392911563458" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1392911563458" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

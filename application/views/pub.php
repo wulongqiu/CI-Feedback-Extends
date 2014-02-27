@@ -71,7 +71,9 @@
 			</tr>
 			<tr>
 				<td class="text-right">头像：</td>
-				<td><?php echo form_upload('avatar');?></td>
+				<td><IFRAME align=middle marginWidth=0 vspace=-0 marginHeight=0
+                            src="<?php echo $site_url;?>index.php/upload"
+                            frameBorder=no width=450 scrolling=auto height=350></IFRAME></td>
 			</tr>
 			<tr>
 				<td class="text-right">爱好：</td>

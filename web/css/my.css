@@ -2,3 +2,6 @@
 label {
     font-weight: normal;
 }
+input[type="file"] {
+    display: inline;
+}

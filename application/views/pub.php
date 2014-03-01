@@ -1,3 +1,13 @@
+<?php
+$htmlData = '';
+if (!empty($_POST['about'])) {
+    if (get_magic_quotes_gpc()) {
+        $htmlData = stripslashes($_POST['about']);
+    } else {
+        $htmlData = $_POST['about'];
+    }
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,7 +16,33 @@
 	<link rel="stylesheet" href="<?php echo $site_url;?>css/bootstrap.css">
 	<link rel="stylesheet" href="<?php echo $site_url;?>css/bootstrap-datetimepicker.css">
 	<link rel="stylesheet" href="<?php echo $site_url;?>css/my.css">
-
+    <link rel="stylesheet" href="<?php echo $site_url;?>editor/themes/default/default.css" />
+    <link rel="stylesheet" href="<?php echo $site_url;?>editor/plugins/code/prettify.css" />
+    <script charset="utf-8" src="<?php echo $site_url;?>editor/kindeditor.js"></script>
+    <script charset="utf-8" src="<?php echo $site_url;?>editor/lang/zh_CN.js"></script>
+    <script charset="utf-8" src="<?php echo $site_url;?>editor/plugins/code/prettify.js"></script>
+    <script>
+        KindEditor.ready(function(K) {
+            var editor1 = K.create('textarea[name="about"]', {
+                cssPath : '<?php echo $site_url;?>editor/plugins/code/prettify.css',
+                uploadJson : '<?php echo $site_url;?>editor/php/upload_json.php',
+                fileManagerJson : '<?php echo $site_url;?>editor/php/file_manager_json.php',
+                allowFileManager : true,
+                afterCreate : function() {
+                    var self = this;
+                    K.ctrl(document, 13, function() {
+                        self.sync();
+                        K('form[name=example]')[0].submit();
+                    });
+                    K.ctrl(self.edit.doc, 13, function() {
+                        self.sync();
+                        K('form[name=example]')[0].submit();
+                    });
+                }
+            });
+            prettyPrint();
+        });
+    </script>
 	<!--[if lt IE 9]>
 	<script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
 	<script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
@@ -69,12 +105,14 @@
 					echo form_dropdown('area', $area_array);?>
 				</td>
 			</tr>
-			<tr>
-				<td class="text-right">头像：</td>
-				<td><IFRAME align=middle marginWidth=0 vspace=-0 marginHeight=0
-                            src="<?php echo $site_url;?>index.php/upload"
-                            frameBorder=no width=450 scrolling=auto height=350></IFRAME></td>
-			</tr>
+<!--			<tr>-->
+<!--				<td class="text-right">头像：</td>-->
+<!--				<td><input id="fileToUpload" type="file" size="10" name="fileToUpload" class="input">-->
+<!--                    <button class="button" id="buttonUpload" onclick="return ajaxFileUpload();">上传</button>-->
+<!--                    <br/>-->
+<!--                    <img id='img1' src="" />-->
+<!--                </td>-->
+<!--			</tr>-->
 			<tr>
 				<td class="text-right">爱好：</td>
 				<td>
@@ -87,14 +125,8 @@
 			<tr>
 				<td class="text-right">个人简介：</td>
 				<td>
-					<?php
-					$data = array(
-						'name' => 'about',
-						'rows' => '10',
-						'cols' => '70',
-					);
-					echo form_textarea($data);
-					?>
+                    <textarea name="about" style="width:700px;height:200px;visibility:hidden;">
+                        <?php echo htmlspecialchars($htmlData); ?></textarea>
 				</td>
 			</tr>
 			<tr>
@@ -115,6 +147,7 @@
 <script type="text/javascript" src="<?php echo $site_url;?>js/bootstrap.min.js"></script>
 <script type="text/javascript" src="<?php echo $site_url;?>js/bootstrap-datetimepicker.js"></script>
 <script type="text/javascript" src="<?php echo $site_url;?>js/bootstrap-datetimepicker.zh-CN.js"></script>
+
 <script type="text/javascript">
     $('.form_datetime').datetimepicker({
         language:  'zh-CN',

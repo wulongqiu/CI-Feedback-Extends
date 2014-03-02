@@ -11,6 +11,7 @@ if (!empty($_POST['about'])) {
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8" />
 	<title><?php echo $site_name;?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="<?php echo $site_url;?>css/bootstrap.css">
@@ -41,6 +42,25 @@ if (!empty($_POST['about'])) {
                 }
             });
             prettyPrint();
+        });
+    </script>
+    <script>
+        KindEditor.ready(function(K) {
+            var editor = K.editor({
+                allowFileManager : true
+            });
+            K('#image3').click(function() {
+                editor.loadPlugin('image', function() {
+                    editor.plugin.imageDialog({
+                        showRemote : false,
+                        imageUrl : K('#url3').val(),
+                        clickFn : function(url, title, width, height, border, align) {
+                            K('#url3').val(url);
+                            editor.hideDialog();
+                        }
+                    });
+                });
+            });
         });
     </script>
 	<!--[if lt IE 9]>
@@ -105,14 +125,13 @@ if (!empty($_POST['about'])) {
 					echo form_dropdown('area', $area_array);?>
 				</td>
 			</tr>
-<!--			<tr>-->
-<!--				<td class="text-right">头像：</td>-->
-<!--				<td><input id="fileToUpload" type="file" size="10" name="fileToUpload" class="input">-->
-<!--                    <button class="button" id="buttonUpload" onclick="return ajaxFileUpload();">上传</button>-->
-<!--                    <br/>-->
-<!--                    <img id='img1' src="" />-->
-<!--                </td>-->
-<!--			</tr>-->
+			<tr>
+				<td class="text-right">头像：</td>
+				<td>
+                    <input type="text" id="url3" name="avatar" value="请选择图片"  readonly="readonly" />
+                    <input type="button" id="image3" value="选择图片" />
+                </td>
+			</tr>
 			<tr>
 				<td class="text-right">爱好：</td>
 				<td>

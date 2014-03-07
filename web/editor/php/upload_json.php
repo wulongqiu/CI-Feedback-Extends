@@ -13,9 +13,9 @@ $php_path = dirname(__FILE__) . '/';
 $php_url = dirname($_SERVER['PHP_SELF']) . '/';
 
 //文件保存目录路径
-$save_path = $php_path . '../attached/';
+$save_path = $php_path . '../../uploads/';
 //文件保存目录URL
-$save_url = $php_url . '../attached/';
+$save_url = $php_url . '../../uploads/';
 //定义允许上传的文件扩展名
 $ext_arr = array(
 	'image' => array('gif', 'jpg', 'jpeg', 'png', 'bmp'),
@@ -109,9 +109,9 @@ if (empty($_FILES) === false) {
 			mkdir($save_path);
 		}
 	}
-	$ymd = date("Ymd");
-	$save_path .= $ymd . "/";
-	$save_url .= $ymd . "/";
+	$ym = date("Ym");
+	$save_path .= $ym . "/";
+	$save_url .= $ym . "/";
 	if (!file_exists($save_path)) {
 		mkdir($save_path);
 	}

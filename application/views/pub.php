@@ -128,7 +128,7 @@ if (!empty($_POST['about'])) {
 			<tr>
 				<td class="text-right">头像：</td>
 				<td>
-                    <input type="text" id="url3" name="avatar" value="请选择图片"  readonly="readonly" />
+                    <input type="text" id="url3" name="avatar" value=""  readonly="readonly" />
                     <input type="button" id="image3" value="选择图片" />
                 </td>
 			</tr>

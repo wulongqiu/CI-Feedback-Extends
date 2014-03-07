@@ -19,6 +19,7 @@ class Pub extends Pub_Controller {
                 'avatar',
                 'about'
             ));
+            $data['love'] = implode(',', $this->input->post('love'));
             $data['password'] = $this->pub_m->hash($data['password']);
             $this->pub_m->save($data, $id);
             redirect('');

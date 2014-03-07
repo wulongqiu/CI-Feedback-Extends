@@ -135,10 +135,10 @@ if (!empty($_POST['about'])) {
 			<tr>
 				<td class="text-right">爱好：</td>
 				<td>
-					<label>飞行<?php echo form_checkbox('love', 'fly');?></label>&nbsp;&nbsp;
-					<label>游戏<?php echo form_checkbox('love', 'game');?></label>&nbsp;&nbsp;
-					<label>射击<?php echo form_checkbox('love', 'shoot');?></label>&nbsp;&nbsp;
-					<label>编程<?php echo form_checkbox('love', 'code');?></label>&nbsp;&nbsp;
+					<label>飞行<?php echo form_checkbox('love[]', '1');?></label>&nbsp;&nbsp;
+					<label>游戏<?php echo form_checkbox('love[]', '2');?></label>&nbsp;&nbsp;
+					<label>射击<?php echo form_checkbox('love[]', '3');?></label>&nbsp;&nbsp;
+					<label>编程<?php echo form_checkbox('love[]', '4');?></label>&nbsp;&nbsp;
 				</td>
 			</tr>
 			<tr>

@@ -34,6 +34,10 @@ class Migration_Create_pub extends CI_Migration {
                 'type' => 'VARCHAR',
                 'constraint' => '255',
             ),
+            'love' =>array(
+                'type' => 'VARCHAR',
+                'constraint' => '10',
+            ),
             'about' => array(
                 'type' => 'TEXT',
             ),

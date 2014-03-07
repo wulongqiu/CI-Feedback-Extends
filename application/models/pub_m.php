@@ -28,11 +28,18 @@ class Pub_m extends MY_Model {
             'label' => 'Area',
             'rules' => 'trim|required|xss_clean'
         ),
+
         'avatar' => array(
             'field' => 'avatar',
             'label' => 'Avatar',
             'rules' => 'trim|required|xss_clean'
         ),
+        'love' => array(
+            'field' => 'love',
+            'label' => 'Love',
+            'rules' => 'required|xss_clean'
+        ),
+
         'about' => array(
             'field' => 'about',
             'label' => 'About',

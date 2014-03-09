@@ -72,23 +72,28 @@ if (!empty($_POST['about'])) {
 <p></p>
 <div class="container">
 	<div class="row">
-        <?php echo validation_errors(); ?>
 		<?php
 		$subdata = array(
 			'class' => 'form_horizontal',
 			'role' => 'form',
+            'id' => 'subform',
 		);
 		echo form_open('', $subdata);
 		?>
 		<table class="table table-hover table-bordered">
-			<tr>
-				<td class="text-right" width="120">用户名：</td>
-				<td><?php echo form_input('name','','class="form-control"');?></td>
+			<tr class="field">
+				<td class="text-right" width="120"><label for="name">用户名：</label></td>
+				<td><input type="text" name="name" id="name" value=""  minlength="2" required /></td>
 			</tr>
 			<tr>
-				<td class="text-right">密码：</td>
-				<td><?php echo form_password('password','','class="form-control"'); ?></td>
+				<td class="text-right"><label for="password">密码：</label></td>
+				<td><input id="password" type="password" name="password" value="" minlength="6" required="" /></td>
 			</tr>
+			<tr>
+				<td class="text-right"><label for="confirm_password">重复密码：</label></td>
+				<td><input type="password" id="confirm_password" name="confirm_password" value="" minlength="6" required /></td>
+			</tr>
+
 			<tr>
 				<td class="text-right">性别：</td>
 				<td><label>男<?php echo form_radio('gender','boy', TRUE);?></label>&nbsp;&nbsp;
@@ -102,7 +107,7 @@ if (!empty($_POST['about'])) {
                              data-date=""
                              data-date-format="yyyy MM dd - HH:ii:ss p"
                              data-link-field="dtp_input1">
-                            <input class="form-control" name='birthday' size="16" type="text" value="" readonly>
+                            <input class="form-control" name='birthday' size="16" type="text" value="" readonly required>
                             <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
                             <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
                         </div>
@@ -114,37 +119,38 @@ if (!empty($_POST['about'])) {
 			<tr>
 				<td class="text-right">地区：</td>
 				<td>
-					<?php
-					$area_array = array(
-						'0' => '请选择',
-						'1' => '河南省',
-						'2' => '北京市',
-						'3' => '广东省',
-						'4' => '上海市',
-					);
-					echo form_dropdown('area', $area_array);?>
+                    <select name="area" class="valid" required>
+                        <option value="">请选择</option>
+                        <option value="1">河南省</option>
+                        <option value="2">北京市</option>
+                        <option value="3">广东省</option>
+                        <option value="4">上海市</option>
+                    </select>
 				</td>
 			</tr>
 			<tr>
 				<td class="text-right">头像：</td>
 				<td>
-                    <input type="text" id="url3" name="avatar" value=""  readonly="readonly" />
+                    <input type="text" id="url3" name="avatar" value=""  readonly="readonly" minlength="2" required />
                     <input type="button" id="image3" value="选择图片" />
                 </td>
 			</tr>
 			<tr>
 				<td class="text-right">爱好：</td>
 				<td>
-					<label>飞行<?php echo form_checkbox('love[]', '1');?></label>&nbsp;&nbsp;
-					<label>游戏<?php echo form_checkbox('love[]', '2');?></label>&nbsp;&nbsp;
-					<label>射击<?php echo form_checkbox('love[]', '3');?></label>&nbsp;&nbsp;
-					<label>编程<?php echo form_checkbox('love[]', '4');?></label>&nbsp;&nbsp;
+                    <p>
+                        <label for="fly">飞行<input type="checkbox" id="fly" name="love[]" value="1" required minlength="2"  /></label>&nbsp;&nbsp;
+                        <label for="game">游戏<input type="checkbox" id="game" name="love[]" value="2"  /></label>&nbsp;&nbsp;
+                        <label for="shooter">射击<input type="checkbox" id="shooter" name="love[]" value="3"  /></label>&nbsp;&nbsp;
+                        <label for="code">编程<input type="checkbox" id="code" name="love[]" value="4"  /></label>&nbsp;&nbsp;
+                    </p>
+                    <label for="love[]" class="error"></label>
 				</td>
 			</tr>
 			<tr>
 				<td class="text-right">个人简介：</td>
 				<td>
-                    <textarea name="about" style="width:700px;height:200px;visibility:hidden;">
+                    <textarea name="about" style="width:700px;height:200px;visibility:hidden;" required>
                         <?php echo htmlspecialchars($htmlData); ?></textarea>
 				</td>
 			</tr>
@@ -158,6 +164,7 @@ if (!empty($_POST['about'])) {
 
 		</table>
 		<?php echo form_close(); ?>
+
 	</div>
 </div>
 
@@ -166,6 +173,29 @@ if (!empty($_POST['about'])) {
 <script type="text/javascript" src="<?php echo $site_url;?>js/bootstrap.min.js"></script>
 <script type="text/javascript" src="<?php echo $site_url;?>js/bootstrap-datetimepicker.js"></script>
 <script type="text/javascript" src="<?php echo $site_url;?>js/bootstrap-datetimepicker.zh-CN.js"></script>
+<script type="text/javascript" src="<?php echo $site_url;?>js/jquery.validate.js"></script>
+<script type="text/javascript" src="<?php echo $site_url;?>js/additional-methods.js"></script>
+<script>
+    $("#subform").validate({
+        rules: {
+            confirm_password:{
+                equalTo: "#password"
+            }
+        },
+        messages: {
+            name: "请输入用户名",
+            password: {
+                required: "请输入密码",
+                minlength: "最少6个字符"
+            },
+            confirm_password: {
+                required: "请再次输入密码",
+                minlength: "最少6个字符",
+                equalTo: "两次输入的密码不一样"
+            }
+        }
+    });
+</script>
 
 <script type="text/javascript">
     $('.form_datetime').datetimepicker({

@@ -10,3 +10,4 @@ application/logs/*
 
 system/*
 .idea/*
+web/uploads/*

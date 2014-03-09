@@ -19,6 +19,7 @@ class Pub extends Pub_Controller {
                 'avatar',
                 'about'
             ));
+            //love取出来的是一个数组，在这里单独读取出来，并以，为分隔符存储。
             $data['love'] = implode(',', $this->input->post('love'));
             $data['password'] = $this->pub_m->hash($data['password']);
             $this->pub_m->save($data, $id);

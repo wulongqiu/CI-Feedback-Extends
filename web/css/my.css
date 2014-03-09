@@ -5,3 +5,4 @@ label {
 input[type="file"] {
     display: inline;
 }
+form.form_horizontal label.error { display: none; }

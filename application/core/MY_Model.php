@@ -9,7 +9,7 @@ class MY_Model extends CI_Model {
 	function __construct() {
 		parent::__construct();
 	}
-
+    //取得数据
     public function array_from_post($fields) {
         $data = array();
         foreach($fields as $field) {
@@ -17,7 +17,7 @@ class MY_Model extends CI_Model {
         }
         return $data;
     }
-
+    //保存数据
     public function save($data, $id = NULL){
         !isset($data[$this->_primary_key]) || $data[$this->_primary_key] = NULL;
         $this->db->set($data);

@@ -51,7 +51,7 @@ class Pub_m extends MY_Model {
     function __construct() {
         parent::__construct();
     }
-
+    //加密方法
     public function hash($string){
         return hash('sha512', $string . config_item('encryption_key'));
     }

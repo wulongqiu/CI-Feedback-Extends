@@ -173,6 +173,7 @@ if (!empty($_POST['about'])) {
 <script type="text/javascript" src="<?php echo $site_url;?>js/bootstrap.min.js"></script>
 <script type="text/javascript" src="<?php echo $site_url;?>js/bootstrap-datetimepicker.js"></script>
 <script type="text/javascript" src="<?php echo $site_url;?>js/bootstrap-datetimepicker.zh-CN.js"></script>
+<!--表单验证-->
 <script type="text/javascript" src="<?php echo $site_url;?>js/jquery.validate.js"></script>
 <script type="text/javascript" src="<?php echo $site_url;?>js/additional-methods.js"></script>
 <script>
@@ -196,7 +197,7 @@ if (!empty($_POST['about'])) {
         }
     });
 </script>
-
+<!--日期选择-->
 <script type="text/javascript">
     $('.form_datetime').datetimepicker({
         language:  'zh-CN',
